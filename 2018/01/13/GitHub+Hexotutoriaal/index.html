@@ -7,13 +7,14 @@
 
     
 
-    <title>GitHub+Hexo搭建个人博客教程 | Zhuang少东</title>
+    <title>使用GitHub+Hexo搭建个人博客教程 | Zhuang少东</title>
     <meta name="author" content="Zhuang少东" />
     <meta name="version" content="1.0.0" />
     <meta name="keywords" content="" />
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &#34;My New Post&#34;
-M" />
+    <meta name="description" content="背景：有时候需要一个电子笔记本帮助来我们记录一些零散的知识点、代码或者技能点，这个电子的笔记本最好有免费的、稳定的、可以自定义的、方便分享的；基于这几个关键条件，我选择了使用github+hexo搭建了一个自己的博客站点；记录工作、生活中的一些事项。
+一、搭建环境1. 创建git仓库特别注意：仓库名称格式必须是:githubusername.github.io例如：snjatf.github.io（snjatf是我的github用户名）
+2. 生成SSH并配置到github
+此处如果有疑问可以直" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <meta name="baidu-site-verification" content="F0CXvmUgA9" />
@@ -60,16 +61,6 @@ M" />
             <div id="nav-tags" class="nav-tag-wrap">
                 <i class="nav-tag-arrow"></i>
                 
-  <div class="widget-wrap">
-    <h3 class="widget-title">
-        <i class="icon-tag vm"></i>
-        <span class="vm">Labels</span>
-    </h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/作者-关于我/">作者,关于我</a></li></ul>
-    </div>
-  </div>
-
 
             </div>
         </li>
@@ -103,7 +94,7 @@ M" />
          -->
 
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、搭建环境"><span class="toc-number">1.</span> <span class="toc-text">一、搭建环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建git仓库"><span class="toc-number">1.1.</span> <span class="toc-text">1. 创建git仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-生成SSH并配置到github"><span class="toc-number">1.2.</span> <span class="toc-text">2. 生成SSH并配置到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装Hexo并初始化"><span class="toc-number">1.3.</span> <span class="toc-text">3. 安装Hexo并初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装Hexo"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 安装Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-初始化博客"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 初始化博客</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Hexo基础教程"><span class="toc-number">2.</span> <span class="toc-text">二、Hexo基础教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新增一篇文章"><span class="toc-number">2.1.</span> <span class="toc-text">1. 新增一篇文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-启动Hexo服务"><span class="toc-number">2.2.</span> <span class="toc-text">2. 启动Hexo服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-生成静态文件"><span class="toc-number">2.3.</span> <span class="toc-text">3. 生成静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-发布到github-io"><span class="toc-number">2.4.</span> <span class="toc-text">4. 发布到github.io</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、遇到的问题"><span class="toc-number">3.</span> <span class="toc-text">三、遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-访问-zhuangsd-github-io显示404"><span class="toc-number">3.1.</span> <span class="toc-text">1. 访问 zhuangsd.github.io显示404</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Hexo-d发布到github报错，提示无法获取UserName"><span class="toc-number">3.2.</span> <span class="toc-text">2. Hexo d发布到github报错，提示无法获取UserName</span></a></li></ol></li></ol>
         
     </div>
 </aside>
@@ -115,7 +106,7 @@ M" />
     <header class="article-header">
         
         <h1 itemprop="name">
-            GitHub+Hexo搭建个人博客教程
+            使用GitHub+Hexo搭建个人博客教程
         </h1>
         
         <div class="article-meta clearfix">
@@ -133,15 +124,44 @@ M" />
     
     <section class="article-body markdown-body">
         
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>背景：有时候需要一个电子笔记本帮助来我们记录一些零散的知识点、代码或者技能点，这个电子的笔记本最好有免费的、稳定的、可以自定义的、方便分享的；基于这几个关键条件，我选择了使用github+hexo搭建了一个自己的博客站点；记录工作、生活中的一些事项。</p>
+<h2 id="一、搭建环境"><a href="#一、搭建环境" class="headerlink" title="一、搭建环境"></a>一、搭建环境</h2><h3 id="1-创建git仓库"><a href="#1-创建git仓库" class="headerlink" title="1. 创建git仓库"></a>1. 创建git仓库</h3><p>特别注意：仓库名称格式必须是:githubusername.github.io<br>例如：snjatf.github.io（snjatf是我的github用户名）</p>
+<h3 id="2-生成SSH并配置到github"><a href="#2-生成SSH并配置到github" class="headerlink" title="2. 生成SSH并配置到github"></a>2. 生成SSH并配置到github</h3><blockquote>
+<p>此处如果有疑问可以直接度娘</p>
+</blockquote>
+<h3 id="3-安装Hexo并初始化"><a href="#3-安装Hexo并初始化" class="headerlink" title="3. 安装Hexo并初始化"></a>3. 安装Hexo并初始化</h3><blockquote>
+<p>这里需要先安装Nodejs环境，相关教程可以直接度娘，很多教程。</p>
+<h4 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h4 id="2-初始化博客"><a href="#2-初始化博客" class="headerlink" title="2. 初始化博客"></a>2. 初始化博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myBlogs</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="二、Hexo基础教程"><a href="#二、Hexo基础教程" class="headerlink" title="二、Hexo基础教程"></a>二、Hexo基础教程</h2><h3 id="1-新增一篇文章"><a href="#1-新增一篇文章" class="headerlink" title="1. 新增一篇文章"></a>1. 新增一篇文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"Zhuang少东的第一篇文章"</span></span><br></pre></td></tr></table></figure>
+<p>更多配置: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="2-启动Hexo服务"><a href="#2-启动Hexo服务" class="headerlink" title="2. 启动Hexo服务"></a>2. 启动Hexo服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在浏览器中访问：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问</p>
+</blockquote>
+<p>更多配置: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3. 生成静态文件"></a>3. 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>更多配置: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="4-发布到github-io"><a href="#4-发布到github-io" class="headerlink" title="4. 发布到github.io"></a>4. 发布到github.io</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>更多配置: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="三、遇到的问题"><a href="#三、遇到的问题" class="headerlink" title="三、遇到的问题"></a>三、遇到的问题</h2><h3 id="1-访问-zhuangsd-github-io显示404"><a href="#1-访问-zhuangsd-github-io显示404" class="headerlink" title="1. 访问 zhuangsd.github.io显示404"></a>1. 访问 zhuangsd.github.io显示404</h3><blockquote>
+<p>这个问题其实在“创建git仓库”中提到了，如果使用github搭建静态博客，那么仓库名称必须是:gitusername.github.io(我的应该是snjatf.github.io)</p>
+</blockquote>
+<h3 id="2-Hexo-d发布到github报错，提示无法获取UserName"><a href="#2-Hexo-d发布到github报错，提示无法获取UserName" class="headerlink" title="2. Hexo d发布到github报错，提示无法获取UserName"></a>2. Hexo d发布到github报错，提示无法获取UserName</h3><blockquote>
+<p>原因：</p>
+<ol>
+<li><p>hexo配置文件(_config.yml)错误</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  user:</span> <span class="string">Zhuang少东</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:snjatf/snjatf.github.io.git</span></span><br><span class="line"><span class="attr">  brance:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>repo使用github的ssh地址</p>
+</li>
+</ol>
+</blockquote>
+<p>备注：</p>
+<blockquote>
+<p>过程中参考<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></p>
+</blockquote>
 
         
     </section>
@@ -151,13 +171,16 @@ M" />
 
 <div class="comments">
     <div id="disqus_thread">
-        <p class="comment-tips">国内查看评论需要代理~</p>
+        <p class="comment-tips">大兄弟，评论需要梯子的；也可以通过邮箱
+            <a href="mailto:hbsnjzsd@163.com">hbsnjzsd@163.com</a>
+            联系我！
+        </p>
     </div>
     <script>
     window.disqus_config = function () {
         this.language = 'zh';
         this.page.url = 'https://snjatf.github.io/2018/01/13/GitHub+Hexotutoriaal/';
-        this.page.title = 'GitHub+Hexo搭建个人博客教程';
+        this.page.title = '使用GitHub+Hexo搭建个人博客教程';
         this.page.identifier = '2018/01/13/GitHub+Hexotutoriaal/';
     };
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -172,7 +195,7 @@ M" />
 
 </div>
         <footer class="footer">
-    Powered by <a href="https://github.com/snjatf" target="_blank">Zhuang少东</a>
+    Propulsé by <a href="https://github.com/snjatf" target="_blank">Zhuang少东</a>
     <!-- , Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a> -->
 </footer>
 <!-- 
