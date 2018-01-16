@@ -7,15 +7,15 @@
 
     
 
-    <title>如何在.net core  根据不同的环境（开发、测测试）自动调用不同的配置文件 | Zhuang少东</title>
+    <title>如何在.net core  根据环境（开发、测试）自动加载对应的配置文件 | Zhuang少东</title>
     <meta name="author" content="Zhuang少东" />
     <meta name="version" content="1.0.0" />
     <meta name="keywords" content="" />
     <meta name="description" content="一、问题描述
-开发过程中我们经常会遇到这样的问题：开发环境一个配置文件，测试环境一个配置文件，上线环境一个配置文件，一旦有小伙伴不小心签入了配置文件；就会导致各种数据、接口异常。当我们采用了前后端分离后，这个问题会更加明显，前端站点也需要去配置各种接口地址。
+开发过程中我们经常会遇到这样的问题：开发环境一个配置文件，测试环境一个配置文件，线上环境一个配置文件，一旦有小伙伴不小心签入了配置文件；就会导致各种数据、接口异常。当我们采用了前后端分离后，这个问题会更加明显，前端项目也需要去配置各种环境下的接口地址。
 
 二、想法
-是不是可以让程序自动根据环境信息来读取对应的配置文件呢，这样不就解决了环境和配置文件的一一对应么，开发小伙伴再也不担心签入了错误的配置文件被喷了；当前这里的前提是：开发者只能调整开发环境配置文件（appsettings.Deve" />
+有了上面的问题，我们就有了一些想法：是不是可以让程序自动根据环境信息来读取对应的配置文件呢，这样不就解决了环境和配置文件的一一对应么？开发小伙伴再也不担心签入了错误的配置文件被喷了；当前这里的前提是：开发者只能调整开发环" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <meta name="baidu-site-verification" content="F0CXvmUgA9" />
@@ -114,7 +114,7 @@
     <header class="article-header">
         
         <h1 itemprop="name">
-            如何在.net core  根据不同的环境（开发、测测试）自动调用不同的配置文件
+            如何在.net core  根据环境（开发、测试）自动加载对应的配置文件
         </h1>
         
         <div class="article-meta clearfix">
@@ -138,10 +138,10 @@
     <section class="article-body markdown-body">
         
         <h4 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h4><blockquote>
-<p>开发过程中我们经常会遇到这样的问题：开发环境一个配置文件，测试环境一个配置文件，上线环境一个配置文件，一旦有小伙伴不小心签入了配置文件；就会导致各种数据、接口异常。当我们采用了前后端分离后，这个问题会更加明显，前端站点也需要去配置各种接口地址。</p>
+<p>开发过程中我们经常会遇到这样的问题：开发环境一个配置文件，测试环境一个配置文件，线上环境一个配置文件，一旦有小伙伴不小心签入了配置文件；就会导致各种数据、接口异常。当我们采用了前后端分离后，这个问题会更加明显，前端项目也需要去配置各种环境下的接口地址。</p>
 </blockquote>
 <h4 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h4><blockquote>
-<p>是不是可以让程序自动根据环境信息来读取对应的配置文件呢，这样不就解决了环境和配置文件的一一对应么，开发小伙伴再也不担心签入了错误的配置文件被喷了；当前这里的前提是：开发者只能调整开发环境配置文件（appsettings.Development.json），线上环境配置文件（appsettings.Production.json）只能由测试配置。</p>
+<p>有了上面的问题，我们就有了一些想法：是不是可以让程序自动根据环境信息来读取对应的配置文件呢，这样不就解决了环境和配置文件的一一对应么？开发小伙伴再也不担心签入了错误的配置文件被喷了；当前这里的前提是：开发者只能调整开发环境配置文件（appsettings.Development.json），线上环境配置文件（appsettings.Production.json）只能由测试配置。</p>
 </blockquote>
 <h4 id="三、netcore微服务-如何实现这一想法"><a href="#三、netcore微服务-如何实现这一想法" class="headerlink" title="三、netcore微服务 如何实现这一想法"></a>三、netcore微服务 如何实现这一想法</h4><h5 id="1-Startup-cs文件调整"><a href="#1-Startup-cs文件调整" class="headerlink" title="1. Startup.cs文件调整"></a>1. Startup.cs文件调整</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public Startup(IHostingEnvironment env)</span><br><span class="line">&#123;</span><br><span class="line">    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);</span><br><span class="line">    _environment = env;</span><br><span class="line"></span><br><span class="line">    var builder = new ConfigurationBuilder()</span><br><span class="line">        .SetBasePath(env.ContentRootPath)</span><br><span class="line">        .AddJsonFile(&quot;appsettings.json&quot;, true, true)</span><br><span class="line">        .AddJsonFile($&quot;appsettings.&#123;env.EnvironmentName&#125;.json&quot;, true)</span><br><span class="line">        .AddEnvironmentVariables();</span><br><span class="line">    Configuration = builder.Build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-新增配置文件"><a href="#2-新增配置文件" class="headerlink" title="2. 新增配置文件"></a>2. 新增配置文件</h5><p><img src="/images/appsetting.png" alt="配置文件"></p>
