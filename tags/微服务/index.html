@@ -7,7 +7,7 @@
 
     
 
-    <title>Tag: 微服务 | Zhuang少东</title>
+    <title>Mot-clé: 微服务 | Zhuang少东</title>
     <meta name="author" content="Zhuang少东" />
     <meta name="version" content="1.0.0" />
     <meta name="keywords" content="" />
@@ -41,18 +41,6 @@
         
         
         
-        <li class="nav-item">
-            <a class="nav-link" href="/categories/front-end">前端</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/categories/back-end">后端</a>
-        </li>
-        
-        
-        
         <li class="nav-item nav-item-tag">
             <a id="nav-tag" class="nav-link" href="#">标签</a>
             <div id="nav-tags" class="nav-tag-wrap">
@@ -61,15 +49,33 @@
   <div class="widget-wrap">
     <h3 class="widget-title">
         <i class="icon-tag vm"></i>
-        <span class="vm">Tags</span>
+        <span class="vm">Mot-clés</span>
     </h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/">.netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/我/">我</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/配置文件/">配置文件</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/">.netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后端/">后端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/我/">我</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/配置文件/">配置文件</a></li></ul>
     </div>
   </div>
 
 
             </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/coding">编程</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/tutorial">教程</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/note">书记</a>
         </li>
         
         
@@ -81,7 +87,7 @@
         
         
         <li class="nav-item">
-            <a class="nav-link" href="/categories/about">关于</a>
+            <a class="nav-link" href="/categories/about">我</a>
         </li>
         
         
@@ -142,7 +148,7 @@
             
 <div class="article-tag-list">
     <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/netcore/">.netcore</a>, <a class="article-tag-link" href="/tags/微服务/">微服务</a>, <a class="article-tag-link" href="/tags/配置文件/">配置文件</a>
+    <a class="article-tag-link" href="/tags/netcore/">.netcore</a>, <a class="article-tag-link" href="/tags/后端/">后端</a>, <a class="article-tag-link" href="/tags/微服务/">微服务</a>, <a class="article-tag-link" href="/tags/配置文件/">配置文件</a>
 </div>
 
 
@@ -162,12 +168,16 @@
 <h5 id="3-如何配置"><a href="#3-如何配置" class="headerlink" title="3. 如何配置"></a>3. 如何配置</h5><blockquote>
 <ul>
 <li>appsettings.json 默认配置文件</li>
-<li>appsettings.Production.json 测试、生产环境配置文件</li>
-<li>appsettings.Development.json 开发环境配置文件</li>
+<li>appsettings.Production.json 生产环境配置文件</li>
+<li>appsettings.Development.json 测试环境配置文件</li>
 </ul>
 </blockquote>
 <h5 id="4-如何实现"><a href="#4-如何实现" class="headerlink" title="4. 如何实现"></a>4. 如何实现</h5><blockquote>
-<p>经过上面3步配置后，需要特别注意一点：开发环境使用Debug模式编译，生成环境Release模式编译即可。</p>
+<p>经过上面3步配置后，需要特别注意</p>
+<ol>
+<li>开发环境使用：dotnet run</li>
+<li>生成环境使用：dotnet publish<br>即可加载对应的配置文件</li>
+</ol>
 </blockquote>
 
         
@@ -180,7 +190,7 @@
 
 </div>
         <footer class="footer">
-    Powered by <a href="https://github.com/snjatf" target="_blank">Zhuang少东</a>
+    Propulsé by <a href="https://github.com/snjatf" target="_blank">Zhuang少东</a>
     , Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
 </footer>
 <script>
